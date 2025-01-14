@@ -12,8 +12,12 @@ function Nav() {
 
   useEffect(() => {
     const fetchProviders = async () => {
-      const response = await getProviders();
-      setProviders(response)
+      try {
+        const response = await getProviders();
+        setProviders(response);
+      } catch (error) {
+        console.error("Error fetching providers:", error);
+      }
     }
     fetchProviders();
   }, [])
@@ -62,7 +66,7 @@ function Nav() {
         {session?.user ? (
           <div className='flex'>
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image || "/assets/images/default-profile.png"}
               width={37}
               height={37}
               className='rounded-full'
