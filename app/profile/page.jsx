@@ -1,9 +1,24 @@
+"use client"
 import React from 'react'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
-function page() {
+const MyProfile = () => {
+  const handleEdit = () => {
+
+  }
+  const handleDelete = async () => {
+
+  }
   return (
-    <div>page</div>
+    <Profile
+      name="My"
+      desc="Welcome to your Personalized Profile Page"
+      data={[]}
+      handleEdit={handleEdit}
+      hadleDelete={handleDelete}
+    />
   )
 }
 
-export default page
+export default MyProfile
