@@ -1,3 +1,4 @@
+import Feed from '@/components/Feed'
 import React from 'react'
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
         <p className='desc text-center'>
             PrompTamper is an open-source AI prompting tool for modern world to discover, create and share creative prompts
         </p>
-
+        <Feed/>
         
     </section>
   )
