@@ -6,7 +6,7 @@ export const GET = async (request, { params }) => {
     try {
         await ConnectDB();
         const prompts = await Prompt.find({
-            creator: params.id
+            creator: params._id
         }).populate('creator');
 
         return new Response(JSON.stringify(prompts), {
