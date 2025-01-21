@@ -1,6 +1,6 @@
 // app/api/users/[id]/posts/route.js (or .ts)
-import Prompt from "@/models/prompt";
-import { ConnectDB } from "@/utils/database";
+import Prompt from "../../../../../models/prompt";
+import { ConnectDB } from "../../../../../utils/database";
 
 export const GET = async (request, { params }) => {
     try {
